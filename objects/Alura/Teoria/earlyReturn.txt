@@ -1,0 +1,5 @@
+Early Return - Retorno Antecipado
+
+O retorno antecipado fornece funcionalidade para que o resultado de uma instrução condicional possa 
+ser retornado assim que um resultado estiver disponível, em vez de esperar até que o resto da função 
+seja executado. 

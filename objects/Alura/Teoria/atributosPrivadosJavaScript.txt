@@ -1,0 +1,5 @@
+https://github.com/tc39/proposal-class-fields#private-fields
+
+No momento o JavaScript não está 100% implementado referente aos atributos privados. Visto 
+isso usamos a # hastag na frente do atributo e defino um valor inicial para ele. Feito isso 
+eu não vou conseguir utilizar ele fora do escopo da classe.

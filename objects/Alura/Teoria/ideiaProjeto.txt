@@ -1,0 +1,2 @@
+vamos ter um cliente que é um banco e ele quer um sistema onde vai ser possível cadastrar clientes
+e ter conta corrente para esses clientes.

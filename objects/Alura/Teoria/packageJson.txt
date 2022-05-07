@@ -1,0 +1,33 @@
+Para que possamos criar os módulos em JavaScript é necessário criar o arquivo package.json
+
+Exemplo de um arquivo package.json
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto do Bytebank para seus clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
+
+Comandos para criar o package.json e usar os módulos
+
+npm init - comando inicial para informar no terminal do vs code
+package name: 'colocar nome do projeto'
+version: inicialmente vem a versão (1.0.0) - mas pode ser alterado se necessário
+description: descrição do projeto caso seja necessário
+entry point: qual o nome do arquivo que seja o arquivo principal do projeto e vai ir as importações dos módulos.
+test command: deixa em branco
+git repository: deixa em branco 
+keywords: deixa em branco
+author: colocar o nome de quem está fazendo o projeto no caso o meu nome
+license: (ISC) apertar enter
+is this OK? (yes) apertar enter
+
+Feito isso é encessário colocar o type: modules
+
+"type": "module"

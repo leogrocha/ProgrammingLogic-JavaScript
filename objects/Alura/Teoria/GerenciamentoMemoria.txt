@@ -1,0 +1,20 @@
+    Ao criamos um programa em qualquer linguagem de programação precisamos utilizar variáveis para guardar
+valores durante a execução de nossos programas. Cada uma dessas variáveis é armazenada em um lugar da 
+memória do computador. 
+    Porém, dependendo dos valores que uma variável guarda o JS trata ela de forma diferente. Passando 
+ela como uma cópia de seu valor ou como uma referência ao espaço de memória  onde ela está guardada. Ele 
+faz isso basedo justamente nos valores que a variável guarda. Tipos primitivos são sempre passados como 
+um valor, enquanto tipos não primitivos sempre são passados como referência.
+
+Tipos Primitivos
+São os valores mais simples que a linguagem consegue trabalhar e geralmente são implementados no nível 
+mais baixo da linguagem. Isso significa que eles não são representados como um objeto e por isso não 
+possuem métodos ou atributos.
+
+Em Javascript os tipos primitivos são:
+string(texto)
+number(número)
+boolean
+null
+undefined
+symbol
