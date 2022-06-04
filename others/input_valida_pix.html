@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            text-align: center;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" />
+    </div>
+    <script>
+        function formatLocale(value) {
+            return value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        }
+
+        var input = document.querySelector('input');
+        // pegar o valor digitado e transformar em numero
+        input.addEventListener('input', function() {
+            var value = input.value.replace(/\D/g, '');
+            input.value = formatLocale(value);
+        });
+
+        // pegar o valor digitado e transformar em numero
+        input.addEventListener('blur', function() {
+            var value = input.value.replace(/\D/g, '');
+            input.value = formatLocale(value);
+        });
+    </script>
+</body>
+
+</html>
