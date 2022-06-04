@@ -34,7 +34,7 @@ function valida_cpf(cpf) {
 }
 
 console.log(valida_cpf("13569486699"));
-// // valida_cpf("13569486699");
+// valida_cpf("13569486699");
 console.log(valida_cpf("18823303079"));
 console.log(valida_cpf("12312377756"));
 console.log(valida_cpf("15412377756")); // false
