@@ -14,6 +14,4 @@ console.log(mmc(8,6));
     1 1
 
     total = 24
-
-
 */ 
