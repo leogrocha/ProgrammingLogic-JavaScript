@@ -7,4 +7,4 @@ function fator(number) {
 }
 
 
-fator(97);
+fator(185);
