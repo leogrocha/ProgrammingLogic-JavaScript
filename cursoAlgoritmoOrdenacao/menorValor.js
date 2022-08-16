@@ -22,5 +22,7 @@ function menorValor(arrProdutos, posicaoInicial){
     return maisBarato;
 }
 
+console.log(menorValor(livros, 3));
+
 
 module.exports = menorValor;
