@@ -54,8 +54,34 @@
                 <button id="row30" class="row"></button>
             </div>
         </div>
+        <div class="panel">
+            <div class="tentativas">
+                <h2>Tentativas</h2>
+                <p id="numTentativas">9</p>
+            </div>
+
+            <div class="pares">
+                <h2>Pares</h2>
+                <p id="numPares"></p>
+            </div>
+
+            <div class="paresRestantes">
+                <h2>Pares Restantes</h2>
+                <p id="numParesRestantes">9</p>
+            </div>
+
+            <div class="containerBtnIniciarJogo">
+              <button onclick="iniciarJogo()">Iniciar Jogo</button>
+          
+            </div>
+        </div>
     </div>
     
     <script src="./script.js"></script>
+    <script>
+        window.onload = function () {
+          iniciarJogo();
+        };
+      </script>
 </body>
 </html>
