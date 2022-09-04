@@ -12,6 +12,7 @@ imagemBateria.setAttribute('src', "./img/bateria.png");
 imagemBateria.setAttribute('alt', 'perfil');
 imagemBateria.setAttribute('height', heightImage);
 imagemBateria.setAttribute('width', widthImage);
+imagemBateria.id = 'img1';
 
 
 const imagemBateria2 = document.createElement('img');
@@ -203,7 +204,6 @@ imagemViolino2.setAttribute('src', "./img/violino.png");
 imagemViolino2.setAttribute('alt', 'perfil');
 imagemViolino2.setAttribute('height', heightImage);
 imagemViolino2.setAttribute('width', widthImage);
-
 
 function gerarNumerosAleatorios(min, max) {
     return (Math.random() * (max - min) + min).toFixed(0);
