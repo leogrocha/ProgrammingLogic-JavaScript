@@ -10,6 +10,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
 }
 
 .card_principal {
@@ -27,7 +28,7 @@
     border: 1px solid black;
     padding: 10px;
     width: 180px;
-    height: 70px;
+    height: 110px;
     margin: 0px 10px 0px 10px;
     border-radius: 10px;
     background-color: #fff;
@@ -38,4 +39,35 @@
     font-weight: bold;
     font-size: 36px;
     margin: 10px;
+}
+
+/* .card {
+    margin: 10px;
+    border-radius: 10px;
+} */
+
+.panel {
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+}
+
+.panel .content h3 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.panel .content p {
+    text-align: center;
+    font-size: 24px;
+}
+
+.content {
+    margin-left: 20px;
 }
