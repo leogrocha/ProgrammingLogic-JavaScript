@@ -16,6 +16,8 @@ function gerarNumerosAleatorios(min, max) {
 function criarCards() {
     let elements = new Set();
     opcoesSelecionadas = [];
+    pontuacao=0;
+    tentativas=0;
     document.getElementById('tentativas').innerHTML = 0;
     document.getElementById('pontuacao').innerHTML = 0;
 
@@ -85,7 +87,7 @@ function checandoPontuacao() {
 
         if (pontuacao == 15) {
             setTimeout(() => {
-                alert("Parabéns!!!! Jogo finalizado");
+                alert("Parabéns!!!! Jogo finalizado! Foram " + tentativas + " tentativas");
             }, 500)
             setTimeout(criarCards, 2000);
             document.getElementById('tentativas').innerHTML = 0;
