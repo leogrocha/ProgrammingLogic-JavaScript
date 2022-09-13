@@ -1,27 +1,31 @@
-const requestOptions = {
-    headers: {
-        "Accept": "application/json, text/javascript, /; q=0.01",
-        "Access-Control-Allow-Headers": "Content-Type",
-        'Content-Type': 'application/json; charset=UTF-8'
-    },
-    method: 'GET',
-    body: JSON.stringify(),
-    redirect: 'follow',
-    cache: 'no-cache'
-};
+ const BASE_URL = "https://api.github.com/users/leogrocha";
 
-const BASE_URL = "https://api.github.com/users/leogrocha";
+  fetch(BASE_URL)
+    .then(res => res.json())
+    .then(result => {
+      console.log(result);
+      imgPerfil(result.avatar_url);
+      infoPerfil(result);
+      bio(result);
+      
+    })
+    .catch(error => {
+      console.log('error', error);
+});
 
-function get_data() {
-    try {
-        fetch(BASE_URL, requestOptions)
-            .then(res => res.json())
-            .then(result => {
-                console.log(result)
-            })
-    } catch (error) {
-        console.log('error', error);
-    }
+function imgPerfil(img) {
+    document.getElementById('imgPerfil').setAttribute('src', img);
+}
+       
+function infoPerfil(dados) {
+    document.getElementById('nome').innerHTML = dados.name;
+
+    document.getElementById('login').innerHTML = `Login: ${dados.login}`;
+
+    document.getElementById('linkUrl').setAttribute('href', dados.html_url);
 }
 
-get_data();
+function bio(dados) {
+    document.getElementById('bio').innerHTML = dados.bio;
+}
+  
