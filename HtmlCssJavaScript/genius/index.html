@@ -10,17 +10,33 @@
 <body>
     
     <div class="container">
+
+        <div class="status">
+            <div class="wait">
+                <h3>WAIT!</h3>
+            </div>
+            <div style="display: none;" class="go">
+                <h3>GO!</h3>
+            </div>
+        </div>
+
+        <div class="containerContador">
+            <h1 id="contador">0</h1>
+        </div>
+
         <div class="card">
-            <div onclick="selecionandoItem(this.id)" id="0" class="item"></div>
-            <div onclick="selecionandoItem(this.id)" id="1" class="item"></div>
-            <div onclick="selecionandoItem(this.id)" id="2" class="item"></div>
-            <div onclick="selecionandoItem(this.id)" id="3" class="item"></div>
+            <div onclick="selectItem(this.id)" id="0" class="item"></div>
+            <div onclick="selectItem(this.id)" id="1" class="item"></div>
+            <div onclick="selectItem(this.id)" id="2" class="item"></div>
+            <div onclick="selectItem(this.id)" id="3" class="item"></div>
         </div>
 
         <div class="containerBtn">
-            <button onclick="selecionarCor()">Começar</button>
+            <button onclick="startGame()">Começar</button>
         </div>
     </div>
+
+    <div id="snackbar"></div>
 
     <script src="./script.js"></script>
 </body>

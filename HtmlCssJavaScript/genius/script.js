@@ -1,76 +1,95 @@
 // Variáveis globais
-let min = 0;
-let max = 3;
-var array = [];
-var arraySorteado = [];
-const colors = [
-    {id: 0, color: 'blue'},
-    {id: 1, color: 'red'},
-    {id: 2, color: 'green'},
-    {id: 3, color: 'yellow'},
-]
+const min = 0;
+const max = 3;
+var select = [];
+var sort = [];
+var cont = 0;
 
-function gerarNumerosAleatorios(min, max) {
+
+// Função para gerar os números aleatórios que serão as cores
+function numberRandom(min, max) {
     return (Math.random() * (max - min) + min).toFixed(0);
 }
 
-function gerarCoresAleatorias() {
-    
+function startGame() {
+    document.querySelector('.wait').style.display = 'flex';
+    document.querySelector('.go').style.display = 'none';
+
+    select = [];
+    sort = [];
+    cont = 0;
+
+    setTimeout(createColors, 1000);
+
 }
 
-function selecionarCor() {
+function createColors() {
+
+    document.querySelector('.wait').style.display = 'flex';
+    document.querySelector('.go').style.display = 'none';
+
+    let color = "";
+
+    var numberSort = numberRandom(min, max);
+    sort.push(numberSort);
+
+    var openColor = 1000;
+    var closedColor = 0;
+
+    for(let i = 0; i < sort.length; i++) {
+        
+        if(sort[i] == 0) {
+            color = "blue";
+        } else if(sort[i] == 1) {
+            color = "red";
+        } else if(sort[i] == 2) {
+            color = "green";
+        } else if(sort[i] == 3) {
+            color = "yellow";
+        }
+
+        openColor += 1000;
+        closedColor = openColor + 1000;
+
+        setTimeout(() => {
+            document.getElementById(sort[i]).style.backgroundColor = color;
+        }, openColor)
+
+        setTimeout(() => {
+            document.getElementById(sort[i]).style.backgroundColor = '';
+        }, closedColor)
+    }
+
+
+}
+
+function selectItem(id) {
+
+    console.log('ID SELECT: ' + id);
+    select.push(id);
+    console.log('ARRAY SELECT: ' + '[' + select + ']');
+
     
-    //const numeroSorteado = gerarNumerosAleatorios(min,max);
-    let contador = 0;
-    let acertou = true;
 
 
-    setTimeout(() => {
-        document.getElementById('0').style.backgroundColor = 'lightskyblue';
-    }, 2000);
 
-    setTimeout(() => {
-        document.getElementById('0').style.backgroundColor = '';
-    }, 3000);
-
-    console.log(array);
-    
-    // while(contador < 5) {
-
-    //     let numeroSorteado = contador;
-
-    //     if(numeroSorteado == 0) {
-    //         setTimeout(() => {
-    //             document.getElementById('blue').style.backgroundColor = 'lightskyblue';
-    //         }, 1000);
-    //         document.getElementById('blue').style.backgroundColor = 'white';
-    //     } else if(numeroSorteado == 1) {
-    //         setTimeout(() => {
-    //             document.getElementById('red').style.backgroundColor = 'lightcoral';
-    //         }, 1000);
-    //         document.getElementById('red').style.backgroundColor = 'white';
-    //     } else if(numeroSorteado == 2) {
-    //         setTimeout(() => {
-    //             document.getElementById('green').style.backgroundColor = 'lightgreen';
-    //         }, 1000);
-    //         document.getElementById('green').style.backgroundColor = 'white';
-    //     } else if(numeroSorteado == 3) {
-    //         setTimeout(() => {
-    //             document.getElementById('yellow').style.backgroundColor = 'yellow';
-    //         }, 1000);
-    //         document.getElementById('yellow').style.backgroundColor = 'white';
-    //     }
-
-    //     contador++;
-    // }
-
-    
 }
 
 
-function selecionandoItem(id) {
-    console.log(id);
-    array.push(id);
+
+
+
+function ToastSnack(msg, tempo, margin, tipo) {
+    var tempo = tempo == undefined ? 4000 : tempo;
+    var x = document.getElementById("snackbar");
+    x.innerHTML = msg;
+    x.className = "show";
+
+    x.style.marginBottom = margin == undefined ? '0px' : margin;
+    x.style.backgroundColor = tipo == 'erro' ? 'red' : '#1c1c1cc2';
+    setTimeout(function () {
+        x.className = x.className.replace("show", "");
+        x.style.marginBottom = '0px';
+
+    }, tempo);
 }
-
-
