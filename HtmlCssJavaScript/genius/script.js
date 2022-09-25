@@ -81,7 +81,7 @@ function selectColors() {
     for(let i = 0; i < select.length; i++) {
         if(sort[i] != select[i]) {
             equals = false;
-            ToastSnack("Erooooou! Tente Novamente", 3000, '10px', 'erro');
+            ToastSnack("Lost! Try Again", 3000, '10px', 'erro');
             setTimeout(startGameLost, 4000);
         }
 
