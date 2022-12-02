@@ -1,23 +1,29 @@
-// class Banco {
-//     constructor(nome, saldo) {
-//         this.nome = nome;
-//         this.saldo = saldo;
-//     }
+class Nubank {
+    constructor(id, nome, saldo){
+        this.id = id;
+        this.nome = nome;
+        this.saldo = saldo;
+    }
 
-//     deposito(valor) {
-//         this.saldo += valor;
-//     }
-// }
+    deposito(valor) {
+        return this.saldo += valor;
+    }
 
-// const banco = new Banco('Seu Madruga', 500.00);
-// banco.deposito(10.00);
-// console.log(banco);
-
-class Teste {
-    message(){
-        return 'Hello world';
+    saque(valor) {
+        this.saldo - valor < 0 ? this.saldo : this.saldo -= valor;
     }
 }
 
-const teste = new Teste();
-console.log(teste.message());
+const nubank = new Nubank(1, 'Seu Madruga', 5000);
+
+console.log(nubank);
+
+nubank.deposito(1000);
+console.log(nubank);
+nubank.saque(2000);
+console.log(nubank);
+nubank.saque(1000);
+console.log(nubank);
+nubank.deposito(2000);
+console.log(nubank);
+
