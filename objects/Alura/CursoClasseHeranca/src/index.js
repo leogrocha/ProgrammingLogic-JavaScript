@@ -1,5 +1,6 @@
 import {Personagem} from './modules/personagem.js'
 import {PersonagemView} from './components/personagem-view.js';
+import {Mago} from './modules/mago.js';
 
 // const personagemPedrinho = {
 //     nome: 'Pedrinho',
@@ -34,8 +35,12 @@ import {PersonagemView} from './components/personagem-view.js';
 // console.log(`Insignia de ${personagemPedrinho.nome} : ${personagemPedrinho.obterInsignia()}`);
 // console.log(`Insignia de ${personagemJose.nome} : ${personagemJose.obterInsignia()}`);
 
-const personagemPedrinho = new Personagem('Pedrinho', 5, 'Mago');
-const personagemJose = new Personagem('José', 3, 'Arqueiro');
+// const personagemPedrinho = new Personagem('Pedrinho', 5, 'Mago');
+// const personagemJose = new Personagem('José', 3, 'Arqueiro');
 
-const personagens = [personagemPedrinho, personagemJose];
+const magoAntonio = new Mago('Antonio', 4, 'fogo', 4, 3);
+const magaJulia = new Mago('Julia', 8, 'gelo', 7, 10);
+
+
+const personagens = [magoAntonio, magaJulia];
 new PersonagemView(personagens).render();
