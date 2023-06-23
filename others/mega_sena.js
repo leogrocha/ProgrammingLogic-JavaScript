@@ -1,9 +1,11 @@
+const quantidadeNumerosSorteados = 6;
+
 function sortear_numeros() {
     let nums = [];
     let min = Math.ceil(1);
     let max = Math.floor(60);
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < quantidadeNumerosSorteados; i++) {
         nums.push(Math.floor(Math.random() * (max - min + 1)) + min);
     }
 
