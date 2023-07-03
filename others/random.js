@@ -11,7 +11,7 @@ function arrayComNumerosCriados() {
 
     while(elements.size != qtdeElementos) {
         for(let i = 0; i < qtdeElementos; i++){
-            elements.add(gerarNumerosAleatorios(min, max));
+            elements.add(Number(gerarNumerosAleatorios(min, max)));
         }   
     }
 
