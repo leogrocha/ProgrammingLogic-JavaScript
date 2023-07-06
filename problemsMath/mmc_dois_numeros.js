@@ -19,7 +19,8 @@ function mmc(number1, number2) {
 }
 
 console.log(mmc(8,6));
-console.log(mmc(10,5));
+console.log(mmc(10, 5));
+
 
 /*
     8 6 - 2
