@@ -2,7 +2,7 @@ const quantidadeNumerosSorteados = 5;
 const minimo = 1;
 const maximo = 80;
 
-function sortear_numeros() {
+function sortearNumeros() {
     let nums = [];
     let min = Math.ceil(minimo);
     let max = Math.floor(maximo);
@@ -14,12 +14,12 @@ function sortear_numeros() {
     return nums.sort((a,b) => a - b);
 }
 
-function resultado_sorteio() {
+function resultadoSorteio() {
     
     let nums = [];
     do {
         let elements = new Set();
-        let numeros_sorteados = sortear_numeros();
+        let numeros_sorteados = sortearNumeros();
         nums = [];
         numeros_sorteados.map((value) => elements.add(value));
         nums = [...elements];    
@@ -29,4 +29,4 @@ function resultado_sorteio() {
     console.log(nums);
 }
 
-resultado_sorteio();
+resultadoSorteio();
