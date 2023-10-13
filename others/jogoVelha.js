@@ -4,7 +4,7 @@ let arrayJogadas = ['','','','','','','','',''];
 arrayJogadas[5] = 'x';
 console.log(arrayJogadas);
 
-console.log('teste');
+
 
 
 

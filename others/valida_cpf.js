@@ -1,4 +1,6 @@
 function valida_cpf(cpf) {
+    
+    
     if (cpf.length != 11) {
         return false;
     } else {
