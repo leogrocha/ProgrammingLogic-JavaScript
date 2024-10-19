@@ -8,5 +8,8 @@
   },
   "author": "Leonardo Rocha",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "bytebank": "file:"
+  }
 }
