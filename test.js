@@ -6,3 +6,4 @@ const valorDescontado = valor - (valor * (porcentagem/100));
 
 console.log(acrescimoJuros);
 console.log(valorDescontado);
+
