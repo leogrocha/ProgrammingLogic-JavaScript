@@ -1,9 +1,25 @@
-const valor = 50;
-const porcentagem = 30;
+let map = new Map();
 
-const acrescimoJuros = valor * (1 + (porcentagem/100));
-const valorDescontado = valor - (valor * (porcentagem/100));
+const transaction1 = {
+    id: 1,
+    valor: 10
+}
 
-console.log(acrescimoJuros);
-console.log(valorDescontado);
+const transaction2 = {
+    id: 2,
+    valor: 20
+}
 
+const transaction3 = {
+    id: 3,
+    valor: 30
+}
+
+map.set("chaves", [transaction1])
+
+map.set("chaves", [...map.get("chaves"), transaction2])
+
+map.set("quico", map.has("quico") ? [...map.get("quico"), transaction3] : transaction3)
+
+
+console.log(map);

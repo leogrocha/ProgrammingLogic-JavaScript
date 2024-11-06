@@ -7,11 +7,13 @@ const invalidTransactions = (transactions) => {
 
         listOfTransactions.push({
             "name": transactionSplit[0],
-            "time": transactionSplit[1],
-            "amount": transactionSplit[2],
+            "time": Number(transactionSplit[1]),
+            "amount": Number(transactionSplit[2]),
             "city": transactionSplit[3]
         })
     }
+
+    console.log(listOfTransactions)
 
     for (let index in listOfTransactions) {
         let transaction = listOfTransactions[index];
