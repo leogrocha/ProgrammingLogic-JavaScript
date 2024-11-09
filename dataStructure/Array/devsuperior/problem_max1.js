@@ -1,6 +1,7 @@
 const maxConsecutiveOnes = (nums) => {
     let list = [];
     let count = 0;
+    let bigger = 0;
 
     for(let num of nums) {
         if(num===1){
@@ -18,7 +19,7 @@ const maxConsecutiveOnes = (nums) => {
         list.push(count);
     }
 
-    let bigger = 0;
+    
     for (let num of list) {
         if (num > bigger) {
             bigger = num;

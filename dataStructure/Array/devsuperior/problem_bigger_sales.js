@@ -1,13 +1,16 @@
 const biggerSales = (sales) => {
     let bigger = 0;
+    let seller;
 
     for (let sale of sales) {
         if (sale.amount > bigger) {
             bigger = sale.amount;
+            seller = sale;
+
         }
     }
 
-    return bigger;
+    return seller;
 }
 
 

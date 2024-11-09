@@ -1,6 +1,6 @@
 const mergeArrays = (nums1, nums2) => {
     
-    let arrayConcat = nums2.concat(nums1);
+    let arrayConcat = nums1.concat(nums2);
 
     let listaOrdenada = [];
 
@@ -11,6 +11,14 @@ const mergeArrays = (nums1, nums2) => {
     }
 
     return listaOrdenada.sort((a, b) => a - b);
+}
+
+const merge = (nums1, m, nums2, n) => {
+    for(let i = 0; i < n; i++) {
+        nums1[m+1] = nums2[i];
+    }
+
+    nums1.sort((a, b) => a-b)
 }
 
 const nums1 = [1,2,3,0,0,0];
