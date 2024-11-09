@@ -1,6 +1,10 @@
-const myObj = {name: "John", age: 31, city: "New York"};
-const list = [myObj];
+let listOfPersons = [];
 
-const myJSON = JSON.stringify(list);
+for (let index = 1; index <= 10; index++) {
+    listOfPersons.push({
+        id: index,
+        name: "Person"+index
+    });
+}
 
-console.log(myJSON);
+console.log(listOfPersons);
