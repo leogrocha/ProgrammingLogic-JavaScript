@@ -1,5 +1,4 @@
 const duplicateZeros = (nums) => {
-
     for (let index = 0; index < nums.length; index++) {
         let num = nums[index];
 
@@ -17,10 +16,4 @@ const duplicateZeros = (nums) => {
 const nums = [1,0,2,3,0,4,5,0];
 console.log(duplicateZeros(nums));
 
-
 console.log(duplicateZeros([1,2,3]));
-
-
-// nums.splice(2, 0, 0)
-// nums.pop();
-// console.log(nums);

@@ -1,5 +1,4 @@
 const dotProductTwoArrays = (arr1, arr2) => {
-
     let sum = 0;
 
     for (let index = 0; index < arr1.length; index++) {

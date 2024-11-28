@@ -1,5 +1,4 @@
 const sortedArray = (nums) => {
-
     let numsMultiply = nums.map((value) => Math.pow(value, 2))
     numsMultiply.sort((a, b) => a - b);
 

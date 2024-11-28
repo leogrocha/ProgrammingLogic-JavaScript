@@ -6,7 +6,6 @@ const biggerSales = (sales) => {
         if (sale.amount > bigger) {
             bigger = sale.amount;
             seller = sale;
-
         }
     }
 

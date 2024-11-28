@@ -1,5 +1,4 @@
 const findEvenNumberDigits = (digits) => {
-
     let count = 0;
 
     for (let digit of digits) {

@@ -1,5 +1,4 @@
 const mergeArrays = (nums1, nums2) => {
-    
     let arrayConcat = nums1.concat(nums2);
 
     let listaOrdenada = [];
