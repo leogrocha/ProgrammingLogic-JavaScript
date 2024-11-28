@@ -3,7 +3,7 @@ const number = 28;
 // var nums = [];
 
 var sum = 0;
-for(let index = 1; index < number; index++) {
+for(let index = 1; index < number/2; index++) {
     if(number % index == 0) {
         sum += index;
     }
