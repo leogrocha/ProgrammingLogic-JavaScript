@@ -1,12 +1,12 @@
-let listOfPersons = [];
+const sequentialSearch = (elem, arr) => {
 
-for (let index = 1; index <= 10; index++) {
-    listOfPersons.push({
-        id: index,
-        name: "Person"+index,
-        document: "Document"+index,
-        active: index % 2 == 0
-    });
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === elem) {
+            return i;
+        }   
+    }
+
+    return -1;
 }
 
-console.log(listOfPersons);
+console.log(sequentialSearch(32, [15,82,79,32,41,28]));

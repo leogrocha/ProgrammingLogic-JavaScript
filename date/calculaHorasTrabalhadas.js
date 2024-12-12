@@ -18,5 +18,5 @@ function calculaDiferencaTempo(millisegundos) {
     };
 }
 
-console.log(calculaDiferencaTempo(retornaMillisegundos('07:58:00', '16:30:00') - retornaMillisegundos('12:49:00', '13:32:00')));
+console.log(calculaDiferencaTempo(retornaMillisegundos('09:02:00', '17:57:00') - retornaMillisegundos('12:04:00', '13:05:00')));
 
