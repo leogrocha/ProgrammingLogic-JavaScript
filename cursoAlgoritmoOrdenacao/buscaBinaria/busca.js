@@ -20,4 +20,4 @@ function busca(array, de, ate, valorBuscado) {
     }
 }
 
-console.log(busca(listaLivros, 0, listaLivros.length - 1, 60));
+console.log(busca(listaLivros, 0, listaLivros.length - 1, 15));
